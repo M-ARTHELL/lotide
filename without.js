@@ -26,11 +26,11 @@ const without = function(array, toRemove) {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
     //If element in array at index is in toRemove do nothing.
-    if(toRemove.includes(array[i])) {
+    if (toRemove.includes(array[i])) {
       // (nothing)
     } else {
     //Push other elements to newArray.
-    newArray.push(array[i])
+      newArray.push(array[i]);
     }
   }
   //Return newArray.
