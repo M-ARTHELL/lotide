@@ -20,12 +20,6 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-/**
- * loop through things to remove
- * loop through array
- * push array objects that don't need to be removed to new array
- */
-
 const without = function(array, toRemove) {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
