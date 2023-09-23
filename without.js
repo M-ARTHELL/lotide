@@ -1,3 +1,4 @@
+//eqArrays copy
 const eqArrays = function(arr1, arr2) {
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
@@ -12,6 +13,7 @@ const eqArrays = function(arr1, arr2) {
   }
 };
 
+//assertEqual copy
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     return console.log("✅✅✅ Assertion Passed: " + [actual] + " === " + [expected]);
@@ -23,13 +25,16 @@ const assertArraysEqual = function(actual, expected) {
 const without = function(array, toRemove) {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
+    //If element in array at index is in toRemove do nothing.
     if(toRemove.includes(array[i])) {
-      /* nothing*/
+      // (nothing)
     } else {
+    //Push other elements to newArray.
     newArray.push(array[i])
     }
   }
-  return console.log(newArray);
+  //Return newArray.
+  return newArray;
 };
 
 //Tests

@@ -1,3 +1,4 @@
+//assertEqual copy
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     return console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,6 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+//Returns array elements at index 1 onwards.
 const tail = function(array) {
   return array.slice(1);
 };
