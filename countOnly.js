@@ -14,9 +14,14 @@ const countOnly = function(allItems, itemsToCount) {
   const results = {}
   //checking contents of allItems
   for (const item of allItems) {
+    //setting + counting instances in results
+    if (results[item]) {
+      results[item] += 1;
+    } else {
+      results[item] = 1;
+    }
     console.log(item);
   }
-
   return results;
 };
 
