@@ -1,3 +1,22 @@
+//assertArraysEqual
+const assertArraysEqual = function(actual, expected) {
+  const fail = `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
+  const pass = `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
+
+  if (actual.length === expected.length) {
+    for (let i = 0; i < actual.length; i++) {
+      if (actual[i] !== expected[i]) {
+        return console.log(fail);
+      } else {
+        return console.log(pass);
+      }
+    }
+  } else {
+    return console.log(fail);
+  }
+};
+
+//letterPositions
 const letterPositions = function(string) {
   //create blank object template
   const results = {};
@@ -17,4 +36,5 @@ const letterPositions = function(string) {
   return results;
 };
 
-console.log(letterPositions("lighthouse in the house"));
+assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(letterPositions("hello").l, [4]);
