@@ -9,7 +9,7 @@ const middle = function(array) {
   let arrayMiddle = [];
   //Returns empty array if it's too short.
   if (array.length === 1 || array.length === 2) {
-    return console.log(arrayMiddle);
+    return arrayMiddle;
     //Push two middle elements for even arrays.
   } else if (array.length % 2 === 0) {
     arrayMiddle.push(array[(array.length / 2) - 1]);
@@ -19,7 +19,7 @@ const middle = function(array) {
     arrayMiddle.push(array[Math.floor(array.length / 2)]);
   }
   //Print middle arrays to console.
-  return console.log(arrayMiddle);
+  return arrayMiddle;
 };
 
 module.exports = middle;
