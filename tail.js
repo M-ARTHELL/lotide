@@ -1,7 +1,6 @@
-//assertEqual
-const assertEqual = require('./assertEqual');
+const _ = require('./index');
 
-//Returns array elements at index 1 onwards.
+// returns all array elements that come after the first
 const tail = function(array) {
   return array.slice(1);
 };
