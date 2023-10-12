@@ -1,6 +1,7 @@
 const _ = require('./index');
 
 // eqArrays
+// takes two arrays (arr1, arr2) and compares them
 const eqArrays = function(arr1, arr2) {
   let outcome = false;
 
