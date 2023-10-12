@@ -34,5 +34,3 @@ module.exports = {
   takeUntil,
   without
 };
-
-module.exports = index;
