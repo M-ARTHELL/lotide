@@ -1,38 +1,19 @@
-//assertEqual
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log("✅✅✅ Assertion Passed: " + [actual] + " === " + [expected]);
-  } else {
-    return console.log("🛑🛑🛑 Assertion Failed: " + [actual] + " !== " + [expected]);
-  }
-};
+const _ = require('./index');
 
 
-
-//findKeyByValue
+// findKeyByValue
+// takes an object (obj) and the contents of a key (content) to find and return said key
 const findKeyByValue = function(obj, content) {
-  //finds object "obj" and creates an array of its keys
+  // creates an array of the input object's keys for reference
   let keys = Object.keys(obj);
-  //checking each key in array of keys
   for (let key of keys) {
-    //compare with desired contents of obj and returns key when matched
+    // comparing each key's contents to the contents of the desired key and returns said key when a match is found
     if (content === obj[key]) {
       return key;
     }
   }
-  //returns undefined if no match
+  // returns undefined if no match
   return undefined;
 }
 
-
-
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
-
-
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+module.exports = findKeyByValue;
