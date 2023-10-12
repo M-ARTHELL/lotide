@@ -1,25 +1,23 @@
-//assertEqual
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log("✅✅✅ Assertion Passed: " + [actual] + " === " + [expected]);
-  } else {
-    return console.log("🛑🛑🛑 Assertion Failed: " + [actual] + " !== " + [expected]);
-  }
-};
+const _ = require('./index');
 
- //countLetters
+ // countLetters
+ // takes a string (string) and counts the letters within it, skipping spaces
 const countLetters = function(string) {
   const totals = {};
-  //loop through letters in string
+
+  // loop through letters in string
   for (letter of string) {
     if (totals[letter]) {
-      //add to existing instance of letters
+      // adds +1 to an existing instance. if no instance exists, creates it and sets it to 1
       totals[letter]++;
     } else {
-      //create new instance if nonexistent
       totals[letter] = 1;
     }
   }
-  //return object of letter count
+  // removes space (" ") count from totals object
+  delete totals[" "]
+  // return object containing letter count
   return totals;
 };
+
+module.exports = countLetters;
