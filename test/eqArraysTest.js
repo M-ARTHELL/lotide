@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const _ = require('../index');
 
 
-describe("#countLetters", () => {
+describe("#eqArrays", () => {
   it("returns 'true' if input arrays are equal", () => {
     assert.deepEqual(_.eqArrays([1, 2, 3], [1, 2, 3]), true);
   });
