@@ -1,9 +1,8 @@
-//assertEqual
-const assertEqual = require('./assertEqual');
+const _ = require('./index');
 
-//head
+// head
+// takes an array and returns the first element in it
 const head = function(array) {
-  //Returns first element in array.
   return array[0];
 };
 
