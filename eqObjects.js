@@ -10,6 +10,11 @@ const eqObjects = function(object1, object2) {
   const objKeys2 = Object.keys(object2);
   let outcome = false;
 
+  // if both objects have no keys, stop code and return true
+  if (objKeys1.length === 0 && objKeys2.length === 0) {
+    return true;
+  }
+
   // compares the length of key arrays, continues accordingly
   if (objKeys1.length === objKeys2.length) {
     // passes keys to eqArrays for comparison and sets outcome as result
