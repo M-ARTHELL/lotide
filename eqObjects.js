@@ -8,7 +8,7 @@ const eqObjects = function(object1, object2) {
   // creates array of keys for each object to use as reference
   const objKeys1 = Object.keys(object1);
   const objKeys2 = Object.keys(object2);
-  let outcome = null;
+  let outcome = false;
 
   // compares the length of key arrays, continues accordingly
   if (objKeys1.length === objKeys2.length) {
@@ -23,23 +23,18 @@ const eqObjects = function(object1, object2) {
           if(eqArrays(object1[key].sort(), object2[key].sort())) {
             outcome = true;
           } else {
-            outcome = false;
-            return false;
+            return outcome;
           }
         } else {
           // if non-array, compares them normally and sets the outcome accordingly
           if(object1[key] === object2[key]){
             outcome = true;
           } else {
-            outcome = false
             return outcome;
           }
         }
       }
     }
-  } else {
-    // if key arrays are not equal in length, sets outcome to false
-    outcome = false;
   }
   return outcome;
 };
