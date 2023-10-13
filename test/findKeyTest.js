@@ -6,7 +6,7 @@ const _ = require('../index');
       assert.equal(_.findKey({ "Blue Hill": { stars: 1 }, "Akaleri": { stars: 3 },"noma": { stars: 2 } }, x => x.stars === 2), "noma");
     });
 
-    it("returns false when entering { `Blue Hill`: { stars: 1 }, `Akaleri`: { stars: 3 },`noma`: { stars: 23 } } and (x => x.stars === 2)", () => { 
+    it("returns undefined when entering { `Blue Hill`: { stars: 1 }, `Akaleri`: { stars: 3 },`noma`: { stars: 23 } } and (x => x.stars === 2)", () => { 
       assert.equal(_.findKey({ "Blue Hill": { stars: 1 }, "Akaleri": { stars: 3 },"noma": { stars: 23 } }, x => x.stars === 2), undefined);
     });
 
