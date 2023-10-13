@@ -2,7 +2,7 @@ const _ = require('./index');
 
 
 // without
-// takes in an array and an array with unwanted elements, then returns a copy of thefirst array with the elements removed
+// takes in an array and an array with unwanted elements, then returns a copy of the first array with the unwanted elements removed
 const without = function(array, toRemove) {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
