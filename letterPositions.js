@@ -1,34 +1,21 @@
-//assertArraysEqual
-const assertArraysEqual = function(actual, expected) {
-  const fail = `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
-  const pass = `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
+const _ = require('./index');
 
-  if (actual.length === expected.length) {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        return console.log(fail);
-      } else {
-        return console.log(pass);
-      }
-    }
-  } else {
-    return console.log(fail);
-  }
-};
 
-//letterPositions
+// letterPositions
+// takes in a string and returns an object where each letter is a key and their contents is an array of their indicies
 const letterPositions = function(string) {
-  //create blank object template
   const results = {};
-  //look through letters of string
+
   for (let i = 0; i < string.length; i++) {
     //if there's a space, do nothing
     if (string[i] === ' ') {
-      //nothing
-    //if letter doesn't exist, add it
-    } else if (results.hasOwnProperty(string[i]) == false) {
+      //(nothing)
+
+    //if there's no intstance of the current letter as a key, add it to the object with the current index in an array
+    } else if (results[string[i]] == undefined) {
       results[string[i]] = [i];
-    //if letter exists, push index to the correct array in object
+
+    //if the current letter exists already, push the index to its array
     } else {
       results[string[i]].push(i);
     }
@@ -36,5 +23,4 @@ const letterPositions = function(string) {
   return results;
 };
 
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [4]);
+module.exports = letterPositions;
