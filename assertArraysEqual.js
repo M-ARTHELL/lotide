@@ -15,10 +15,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-/*
-// tests
-assertArraysEqual([1, 2], [1, 2]);
-assertArraysEqual([1, 2], [2, 1]);
-*/
-
 module.exports = assertArraysEqual;
