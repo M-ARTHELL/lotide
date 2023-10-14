@@ -2,7 +2,7 @@
   "name": "@m-arthell/lotide",
   "version": "1.0.1",
   "description": "Lotide project from Lightouse Labs.",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
